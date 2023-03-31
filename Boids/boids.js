@@ -140,12 +140,12 @@ function avoidOthers(boid) {
   console.log(x);
   for (let otherBoid of boids) {
     if (otherBoid !== boid) {
-      if ((distance(boid, otherBoid) < minDistance))  {
+      if ((distance(boid, otherBoid) < minDistance)&&(otherBoid.type !=3))  {
        
 
         moveX += boid.x - otherBoid.x;
         moveY += boid.y - otherBoid.y;
-        if((boid.type != otherBoid.type)&&( boid.type==2)&&(otherBoid.type !=3)){
+        if((boid.type != otherBoid.type)&&( boid.type==2)){
           flag=2;
 
       }
